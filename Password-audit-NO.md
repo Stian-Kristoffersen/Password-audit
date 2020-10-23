@@ -39,8 +39,7 @@ Fjerne brukere som er deaktivert
 Verktøy: Hashcat
 https://hashcat.net/hashcat/
 
-	$ sudo hashcat -a 0 -m 1000 hashes-no-disabled-accounts.ntds ~/Documents/wordlists/rockyou.txt \ 
-	-r ~/Documents/rules/OneRuleToRuleThemAll.rule -w3 -O
+	$ sudo hashcat -a 0 -m 1000 hashes-no-disabled-accounts.ntds ~/Documents/wordlists/rockyou.txt -r ~/Documents/rules/OneRuleToRuleThemAll.rule -w3 -O
 
 Lagre resultatet i en fil (cracked.txt)
 	
