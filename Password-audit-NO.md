@@ -8,7 +8,7 @@ Stegene for en passord gjennomgang:
 5. Analyse av funn
 
 
-## Hente ut passord hasher fra Active Directory
+## Hente ut passord hasher fra Active Directory (STIAN)
 
 Verktøy: Impacket-Secretsdump fra Core Impact
 https://github.com/SecureAuthCorp/impacket
