@@ -8,12 +8,12 @@ Stegene for en passord gjennomgang:
 5. Analyse av funn
 
 
-## Hente ut passord hasher fra Active Directory (STIAN)
+## Hente ut passord hasher fra Active Directory
 
 Verktøy: Impacket-Secretsdump fra Core Impact
 https://github.com/SecureAuthCorp/impacket
 
-	$ sudo impacket-secretsdump -use-vss -just-dc-ntlm -user-status contoso administrator:vagrant@192.168.38.102 -outputfile contoso-hashes
+	$ sudo impacket-secretsdump -use-vss -just-dc-ntlm -user-status contoso/administrator:vagrant@192.168.38.102 -outputfile contoso-hashes
 
 
 ## Lete etter LM hasher
