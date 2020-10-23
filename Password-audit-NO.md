@@ -43,31 +43,26 @@ https://hashcat.net/hashcat/
 
 Lagre resultatet i en fil (cracked.txt)
 	
-	$ sudo hashcat -a 0 -m 1000 hashes-no-disabled-accounts.ntds ~/Documents/wordlists/rockyou.txt \ 
-	-r ~/Documents/rules/OneRuleToRuleThemAll.rule -w3 -O --username --show > cracked.txt 
+	$ sudo hashcat -a 0 -m 1000 hashes-no-disabled-accounts.ntds ~/Documents/wordlists/rockyou.txt -r ~/Documents/rules/OneRuleToRuleThemAll.rule -w3 -O --username --show > cracked.txt 
 
 
 ## Analyse av funn
 
 Show any passwords occurring more than once:
 
-	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | sort | uniq -c | sort -rn \ 
-	| grep -v -e '^\s*1 '
+	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | sort | uniq -c | sort -rn | grep -v -e '^\s*1 '
 
 Lowercase everything, and show identical passwords:
 
-	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | tr '[:upper:]' '[:lower:]' \ 
-	| sort | uniq -c | sort -rn | grep -v -e '^\s*1 '
+	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | tr '[:upper:]' '[:lower:]'| sort | uniq -c | sort -rn | grep -v -e '^\s*1 '
 
 Lowercase everything, remove numbers, and show identical passwords
 
-	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | tr -d '[:digit:]' \
-	| tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | grep -v -e '^\s*1 '
+	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | tr -d '[:digit:]'| tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | grep -v -e '^\s*1 '
 
 Create a TOP 10 passwords:
 
-	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | sort | uniq -c \
-	| sort -rn | grep -v -e '^\s*1 ' | head -10 
+	$ cat cracked.txt | grep : | cut -d: -f3 | grep -e '[^\s]' | sort | uniq -c | sort -rn | grep -v -e '^\s*1 ' | head -10 
 
 
 
