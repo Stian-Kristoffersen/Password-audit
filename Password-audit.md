@@ -1,6 +1,6 @@
 # Password Audit (Active Directory)
 
-# Dump hashes from Active Directory (AD)
+## Dump hashes from Active Directory (AD)
 
 Tool: Impacket-Secretsdump
 
@@ -22,13 +22,13 @@ if that command returns anything greater than zero, you have LANMan hashes in yo
 
 ## Cleaning of hashfile
 
-1. Remove Machine Accounts
+Remove Machine Accounts
 
 	$ grep -e "^.*[\$]:" contoso-hashes.ntds (this list machine accounts)
 	$ grep -e "^.*[\$]:" -v contoso-hashes.ntds > hashes-no-machine-accounts.ntds
 
 
-2. Remove Disabled Accounts
+Remove Disabled Accounts
 	
 	$ grep -e "Enabled" -v hashes-no-machine-accounts.ntds (this list disabled accounts)
 	$ grep -e "Enabled" hashes-no-machine-accounts.ntds > hashes-no-disabled-accounts.ntds 
