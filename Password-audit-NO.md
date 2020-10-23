@@ -18,7 +18,7 @@ https://github.com/SecureAuthCorp/impacket
 
 ## Lete etter LM hasher
 
-	$ grep -cv aad3b435b5 contoso-hashes
+	$ grep -cv aad3b435b5 contoso-hashes.ntds
 
 
 ## Fjerne maskin-kontoer og brukere som er deaktivert 
