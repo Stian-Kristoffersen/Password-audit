@@ -13,8 +13,7 @@ Stegene for en passord gjennomgang:
 Verktøy: Impacket-Secretsdump fra Core Impact
 https://github.com/SecureAuthCorp/impacket
 
-	$ sudo impacket-secretsdump -use-vss -just-dc-ntlm -user-status \ 
-	contoso/administrator:vagrant@192.168.38.102 -outputfile contoso-hashes
+	$ sudo impacket-secretsdump -use-vss -just-dc-ntlm -user-status contoso/administrator:vagrant@192.168.38.102 -outputfile contoso-hashes
 
 
 ## Lete etter LM hasher
