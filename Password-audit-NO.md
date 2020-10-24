@@ -22,7 +22,9 @@ Leter etter linjer som IKKE inneholder strengen, hvis resultatet er lik 0 = inge
 
 $ grep -cv aad3b435b5 contoso-hashes.ntds
 
+## Eksempel på en liste med både LM og NTLM hasher
 $ grep -e "aad3b435b5" -v LM_NTLM-hashes.ntds (lister ut LM-hasher)
+$ grep -e "aad3b435b5" -v LM_NTLM-hashes.ntds > LM-hashes.ntds
 
 
 ## Crack av LM-hasher (bruteforce)
