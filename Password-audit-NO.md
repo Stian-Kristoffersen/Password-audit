@@ -24,6 +24,7 @@ $ grep -cv aad3b435b5 contoso-hashes.ntds
 
 ## Eksempel på en liste med både LM og NTLM hasher
 $ grep -e "aad3b435b5" -v LM_NTLM-hashes.ntds (lister ut LM-hasher)
+
 $ grep -e "aad3b435b5" -v LM_NTLM-hashes.ntds > LM-hashes.ntds
 
 
