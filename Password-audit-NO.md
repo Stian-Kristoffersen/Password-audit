@@ -18,7 +18,14 @@ $ sudo impacket-secretsdump -use-vss -just-dc-ntlm -user-status contoso/administ
 
 ## Lete etter LM hasher
 
+Leter etter linjer som IKKE inneholder strengen, hvis resultatet er lik 0 = ingen LM-hasher i filen.
+
 $ grep -cv aad3b435b5 contoso-hashes.ntds
+
+
+## Crack av LM-hasher (bruteforce)
+
+$ sudo hashcat -a 3 -m 3000 LM-hashes.ntds
 
 
 ## Fjerne maskin-kontoer og brukere som er deaktivert 
