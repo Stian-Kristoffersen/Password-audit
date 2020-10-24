@@ -38,11 +38,13 @@ $ sudo hashcat -a 3 -m 3000 LM-hashes.ntds
 Fjerne maskin-kontoer
 
 $ grep -e "^.*[\$]:" contoso-hashes.ntds (lister ut maskin-kontoer)
+
 $ grep -e "^.*[\$]:" -v contoso-hashes.ntds > hashes-no-machine-accounts.ntds (fjerner maskin-kontoer og lager en ny fil)
 
 Fjerne brukere som er deaktivert
 
 $ grep -e "Enabled" -v hashes-no-machine-accounts.ntds (lister ut dektiverte brukere)
+
 $ grep -e "Enabled" hashes-no-machine-accounts.ntds > hashes-no-disabled-accounts.ntds (fjerner deaktiverte brukere og lager en ny fil)
 
 
