@@ -4,7 +4,7 @@
 
 $ sudo apt install powershell gss-ntlmssp
 
-# Create some symlinks to make it work
+## Create some symlinks to make it work
 
 $ ln -s /usr/lib/x86_64-linux-gnu/libssl.so.1.0.2 libssl.so.1.0.0
 $ ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.2 libcrypto.so.1.0.0
@@ -23,6 +23,6 @@ $ $mysession = New-PSSession -ComputerName 192.168.38.102 -Authentication Negoti
 
 Type password - if connected, please continue to run remote commands.
 
-Eksample:
+## Eksample:
 
 PS / user/home> Invoke-Command -Session $mysession -ScriptBlock {hostname} 
