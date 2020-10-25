@@ -53,6 +53,12 @@ $ grep -e "Enabled" hashes-no-machine-accounts.ntds > hashes-no-disabled-account
 Verktøy: Hashcat
 https://hashcat.net/hashcat/
 
+## Hashcat attack modes
+0 -> Dictionary attack 
+1 -> Combinator attack
+3 -> Brute-force attack and Mask attack
+6-7 -> Hybrid attack
+
 $ sudo hashcat -a 0 -m 1000 hashes-no-disabled-accounts.ntds ~/Documents/wordlists/rockyou.txt -r ~/Documents/rules/OneRuleToRuleThemAll.rule -w3 -O
 
 Lagre resultatet i en fil (cracked.txt)
