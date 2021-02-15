@@ -10,7 +10,7 @@ Stegene for en passordrevisjon:
 
 ## Hente ut passord-hasher fra Active Directory
 
-Verktøy: Impacket-Secretsdump fra Core Impact
+Verktøy: Impacket-Secretsdump fra SecureAuth
 https://github.com/SecureAuthCorp/impacket
 
 $ sudo impacket-secretsdump -just-dc-ntlm -user-status contoso/administrator:vagrant@192.168.38.102 -outputfile contoso-hashes
